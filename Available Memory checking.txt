@@ -1,0 +1,17 @@
+code:
+
+import psutil
+
+while True:
+    print(f"Available memory: {psutil.virtual_memory().available} bytes")
+
+
+
+Explanation:
+
+import psutil: We import the psutil (process and system utilities) library, which provides an interface to access system details and process utilities.
+
+while True: This is an infinite loop that will keep running until the program is manually stopped.
+
+print(f"Available memory: {psutil.virtual_memory().available} bytes"): This line prints the current available memory in bytes. 
+psutil.virtual_memory().available returns the available memory in bytes.
