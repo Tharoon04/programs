@@ -1,0 +1,35 @@
+Code:
+
+import java.io.File;
+
+public class StorageCheck {
+    public static void main(String[] args) {
+        // Specify the path for which you want to check the storage
+        File file = new File("/"); // Use "/" for root in Unix-like systems or "C:\\" for Windows
+
+        // Get available space in bytes
+        long freeSpace = file.getFreeSpace();
+        // Get total space in bytes
+        long totalSpace = file.getTotalSpace();
+        // Get usable space in bytes
+        long usableSpace = file.getUsableSpace();
+
+        System.out.println("Free space: " + freeSpace + " bytes");
+        System.out.println("Total space: " + totalSpace + " bytes");
+        System.out.println("Usable space: " + usableSpace + " bytes");
+    }
+}
+
+Explanation:
+
+*java.io.File is used to represent a file or directory path in the filesystem.
+
+*new File("/") creates a File object representing the root directory of the filesystem.
+*On Unix-like systems, / represents the root directory.
+*On Windows, you might use "C:\\" for the C: drive.
+
+*file.getFreeSpace(): Returns the amount of free space available on the filesystem in bytes.
+*file.getTotalSpace(): Returns the total amount of space available on the filesystem in bytes.
+*file.getUsableSpace(): Returns the amount of usable space available on the filesystem in bytes.
+
+*The results are printed in bytes. You can convert these values to more human-readable formats (e.g., GB) if needed.
